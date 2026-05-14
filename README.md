@@ -2,8 +2,8 @@
 <img width="750" height="340" alt="what-is-active-directory-and-why-is-it-used" src="https://github.com/user-attachments/assets/a7707de8-8111-4851-a1d1-d536d941249a" />
 </p>
 
-<h1>Active Directory & User Management</h1>
-This project shows how I set up and managed a company’s "Digital ID Office." I used Active Directory to create user accounts, organize them into departments, and manage their access to the company's network.<br />
+<h1>Network Security Groups (NSGs) and Inspecting Network Traffic</h1>
+This lab demonstrates how to monitor and control the flow of data within a cloud environment. I used Wireshark to see live traffic and configured digital firewalls (NSGs) to manage which connections are allowed.<br />
 
 
 
@@ -12,14 +12,13 @@ This project shows how I set up and managed a company’s "Digital ID Office." I
 
 - **Microsoft Azure** (Virtual Machines)
 - **Remote Desktop** (RDP)
-- **Active Directory Domain Services** (AD DS)
-- **Windows Server 2022** (The Domain Controller)
-- **Remote Desktop** (RDP)
+- **Network Security Groups** (Cloud Firewalls)
+- **Wireshark** (Network Protocol Analyzer)
 
 <h2>Operating Systems Used </h2>
 
-- **Windows Server 2022** (The "Brain" of the network)
-- **Windows 11** (The Employee Workstation)
+- **Unbuntu Server** (Linux)
+- **Windows 11**
 
 <h2>List of Prerequisites</h2>
 

@@ -1,5 +1,5 @@
 <p align="center">
-<img width="750" height="340" alt="what-is-active-directory-and-why-is-it-used" src="https://github.com/user-attachments/assets/a7707de8-8111-4851-a1d1-d536d941249a" />
+<img width="1280" height="550" alt="1747463229673" src="https://github.com/user-attachments/assets/52dc0029-286b-4560-8c9b-3ee4f8305e46" />
 </p>
 
 <h1>Network Security Groups (NSGs) and Inspecting Network Traffic</h1>

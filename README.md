@@ -20,14 +20,14 @@ This lab demonstrates how to monitor and control the flow of data within a cloud
 - **Unbuntu Server** (Linux)
 - **Windows 11**
 
-<h2>List of Prerequisites</h2>
+<h2>High-Level Deployment and Configuration Steps</h2>
 
-- **Step 1:** Building the Server (The Domain Controller)
-- **Step 2:** Building the "Org Chart" (Organizational Units)
-- **Step 3:** Issuing Digital IDs (User Management)
-- **Step 4:** Joining the Network (Connecting the Workstation)
+- **Step 1:** Setting up the "Microscope" (Wireshark)
+- **Step 2:** Watching the "Ping" (ICMP Traffic)
+- **Step 3:** Slamming the Door (Configuring NSGs)
+- **Step 4:** Watching the Door Open (Allowing Traffic)
 <h2>Deployment and Configuration Steps</h2>
-<h2>Step 1: Building the Server (The Domain Controller)</h2>
+<h2>Step 1: Setting up the "Microscope" (Wireshark)</h2>
 
 <p>
 <img width="1001" height="550" alt="step 1" src="https://github.com/user-attachments/assets/5d0d973a-0b01-443d-a542-1eaca247c96a" />
@@ -37,19 +37,19 @@ This lab demonstrates how to monitor and control the flow of data within a cloud
 
 </p>
 <p>
-Before you can manage a company, you need a central hub. I set up a Windows Server in Azure and promoted it to a "Domain Controller." This makes it the master computer that holds all the rules and account info for the entire organization.
+To see what’s happening on the network, I installed Wireshark on my Windows workstation. Think of this as a digital microscope—it allows me to capture and inspect every "packet" of data entering or leaving the computer in real-time
 </p>
 <br />
-<h2>Step 2: Building the "Org Chart" (Organizational Units) </h2>
+<h2>Step 2: Watching the "Ping" (ICMP Traffic) </h2>
 <p>
 <img width="783" height="500" alt="Screenshot 2026-05-13 115239" src="https://github.com/user-attachments/assets/269985ec-2a11-4ad2-a58f-f8af5521ac7c" />
 
 </p>
 <p>
-To keep things tidy, I built an "Org Chart" inside the system. By creating these folders (Organizational Units), I can group employees by their department, making it much easier to manage their permissions and access later on.
+I started by "pinging" a Linux server from my Windows computer. In Wireshark, I could see the ICMP traffic—the digital equivalent of shouting "Are you there?" and hearing a "Yes, I am!" back. This confirms the two machines can talk to each other.
 </p>
 <br />
-<h2>Step 3: Issuing Digital IDs (User Management)</h2>
+<h2>Step 3: Slamming the Door (Configuring NSGs)</h2>
 <p>
 <img width="808" height="548" alt="Screenshot 2026-05-13 120309" src="https://github.com/user-attachments/assets/5f565de1-eace-4bd0-bdf0-4ee7670fff02" />
 
@@ -57,10 +57,10 @@ To keep things tidy, I built an "Org Chart" inside the system. By creating these
 
 </p>
 <p>
-This is where I create the actual employee accounts. I set up unique usernames and temporary passwords so new hires can log into the network securely.
+Now for the security part. I went into the Azure Portal and slammed the gate shut by blocking ICMP traffic. Immediately, the "pings" stopped working and started timing out. This shows how an admin can instantly cut off specific communication to protect a server.
 </p>
 <br />
-<h2>Step 4: Joining the Network (Connecting the Workstation)</h2>
+<h2>Step 4: Watching the Door Open (Allowing Traffic)</h2>
 <p>
 <img width="623" height="570" alt="Screenshot 2026-05-13 123209" src="https://github.com/user-attachments/assets/f2ffb586-702b-463e-9161-3ca84411c913" />
 
@@ -68,7 +68,7 @@ This is where I create the actual employee accounts. I set up unique usernames a
 
 </p>
 <p>
-The final step is "introducing" the employee's computer to the server. Once the workstation is joined to the domain, the server is officially in charge. This allows any authorized employee to sit down at that computer and log in with their company ID.
+To finish the test, I removed the block. As soon as the rule was changed, the traffic started flowing again. This lab proves that I can control exactly who is allowed into my network and verify it using live monitoring tools.
 </p>
 <br />
 
